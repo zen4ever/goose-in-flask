@@ -9,7 +9,7 @@ class DefaultSettings(object):
     CONVERT_PATH = '/usr/bin/convert'
     IDENTIFY_PATH = '/usr/bin/identify'
     IMAGE_MIN_BYTES = 4500
-    HOST = '127.0.0.1'
+    HOST = "0.0.0.0"
     PORT = 5000
 
 app = Flask(__name__)

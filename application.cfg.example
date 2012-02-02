@@ -2,3 +2,5 @@ DEBUG = True
 CONVERT_PATH = "/usr/local/bin/convert"
 IDENTIFY_PATH = "/usr/local/bin/identify"
 IMAGE_MIN_BYTES = 4500
+HOST = "127.0.0.1"
+PORT = 5000
