@@ -45,6 +45,11 @@ def get_url():
     article = g.goose.extractContent(url)
     result = {
         'title': article.title(),
+        'meta_description': article.metaDescription(),
+        'meta_keywords': article.metaKeywords(),
+        'canonical_link': article.canonicalLink(),
+        'domain': article.domain(),
+        'publish_date': article.publishDate(),
         'top_image': article.topImage().imageSrc,
         'content': article.cleanedArticleText(),
     }
