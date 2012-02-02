@@ -9,6 +9,8 @@ class DefaultSettings(object):
     CONVERT_PATH = '/usr/bin/convert'
     IDENTIFY_PATH = '/usr/bin/identify'
     IMAGE_MIN_BYTES = 4500
+    HOST = '127.0.0.1'
+    PORT = 5000
 
 app = Flask(__name__)
 app.config.from_object('application.DefaultSettings')
@@ -50,4 +52,4 @@ def get_url():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host=app.config['HOST'], port=app.config['PORT'])
