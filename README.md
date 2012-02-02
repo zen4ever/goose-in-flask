@@ -8,7 +8,7 @@ Installation
 
 It depends on Flask and JPype
 
-Flas installation is fairly straightforward 
+Flask installation is fairly straightforward
 
     pip install flask
 
@@ -38,3 +38,17 @@ Then open your browser and type in:
 If top_image is always empty, make sure that CONVERT_PATH and IDENTIFY_PATH are
 correct. To override them copy/rename "application.cfg.example" to
 "application.cfg" and specify your own values.
+
+Using latest version of Goose
+-----------------------------
+
+To use latest version of Goose you will need to complile it yourself using
+Maven.
+
+     git clone git://github.com/jiminoc/goose.git
+     cd goose
+     mvn package
+     mvn dependency:copy-dependencies
+
+Then copy "target/goose-<version>.jar" and all .jar files from
+"target/dependency" folder to "goose-in-flask/build" folder.
